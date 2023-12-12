@@ -12,3 +12,6 @@ then
 else
 	echo "Deployment ${deploymentName} Rollout is Success"
 fi
+# Add echo statements for debugging
+echo "Executing k8s-deployment-rollout-status.sh script"
+kubectl rollout status deployment ${deploymentName} -n default
